@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nitin Dalakoti – Computer Science Student</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#09070a;--panel:#150d12;--ink:#f4eef0;--muted:#a99aa0;--line:#3a1820;--red:#ff2a45;--red2:#b3001b;--glow:rgba(255,42,69,.45);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:500 19px/1.55 Rajdhani,system-ui,sans-serif;overflow-x:hidden;
+background-image:linear-gradient(rgba(255,42,69,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,42,69,.06) 1px,transparent 1px);background-size:48px 48px}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);z-index:50}
+h1,h2,h3{font-family:"Chakra Petch",Rajdhani,sans-serif;margin:0;line-height:1.05}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(9,7,10,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+nav b{font:700 20px "Chakra Petch",sans-serif;color:var(--red);text-shadow:0 0 14px var(--glow)}
+nav div{display:flex;gap:20px}nav a{text-decoration:none;color:var(--muted);font-size:17px}nav a:hover{color:var(--red)}
+.hero{padding:70px 0 80px;position:relative}
+.tag{display:inline-block;border:1px solid var(--red);color:var(--red);padding:4px 14px;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);font-size:16px;margin-bottom:22px}
+.hero h1{font-size:clamp(44px,10.5vw,118px);font-weight:700;text-transform:uppercase;letter-spacing:-.01em;position:relative;display:inline-block}
+.hero h1 .r{color:var(--red);text-shadow:0 0 28px var(--glow)}
+.hero h1::before,.hero h1::after{content:attr(data-t);position:absolute;left:0;top:0;width:100%;overflow:hidden}
+.hero h1::before{color:#00e5ff;transform:translate(3px,0);clip-path:inset(0 0 100% 0);animation:gl 6s infinite steps(1)}
+.hero h1::after{color:var(--red);transform:translate(-3px,0);clip-path:inset(0 0 100% 0);animation:gl2 6s infinite steps(1)}
+@keyframes gl{0%,92%,100%{clip-path:inset(0 0 100% 0)}93%{clip-path:inset(15% 0 55% 0)}95%{clip-path:inset(60% 0 10% 0)}97%{clip-path:inset(0 0 100% 0)}}
+@keyframes gl2{0%,93%,100%{clip-path:inset(0 0 100% 0)}94%{clip-path:inset(40% 0 35% 0)}96%{clip-path:inset(5% 0 80% 0)}98%{clip-path:inset(0 0 100% 0)}}
+.hero p{max-width:50ch;font-size:23px;color:var(--muted);margin:24px 0 32px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 28px;font:700 17px "Chakra Petch",sans-serif;text-decoration:none;text-transform:uppercase;border:2px solid var(--red);clip-path:polygon(14px 0,100% 0,calc(100% - 14px) 100%,0 100%);transition:.15s}
+.btn.p{background:var(--red);color:#fff;box-shadow:0 0 24px var(--glow)}
+.btn:hover{background:var(--red2);border-color:var(--red2);color:#fff}
+.hud{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:54px}
+.stat{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--red);padding:16px 18px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%)}
+.stat small{color:var(--muted);font-size:15px;display:block}
+.stat strong{font:700 26px "Chakra Petch",sans-serif}
+.bar{height:8px;background:#2a1118;margin-top:8px}.bar i{display:block;height:100%;width:0;background:var(--red);box-shadow:0 0 10px var(--glow);animation:fill 1.6s .3s forwards}
+@keyframes fill{to{width:70%}}
+section{padding:76px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(30px,5vw,46px);text-transform:uppercase;margin-bottom:34px;padding-left:18px;border-left:6px solid var(--red)}
+.about{display:grid;grid-template-columns:1.5fr 1fr;gap:40px}
+.about p{margin:0 0 16px;max-width:58ch}
+.panel{background:var(--panel);border:1px solid var(--line);padding:24px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%)}
+.panel dt{color:var(--muted);font-size:15px}.panel dd{margin:0 0 12px;font:700 20px "Chakra Petch",sans-serif}.panel dd:last-child{margin:0}
+.loadout{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.loadout h3{font-size:20px;color:var(--red);margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1px solid var(--line);background:var(--panel);padding:3px 14px;font-size:17px}
+.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;gap:10px;clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,0 100%);transition:.2s}
+.card:hover{border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red),0 0 28px var(--glow);transform:translateY(-4px)}
+.card h3{font-size:24px;text-transform:uppercase}.card p{margin:0;color:var(--muted);flex:1}
+.card a{color:var(--red);font:700 16px "Chakra Petch",sans-serif;text-decoration:none;text-transform:uppercase}
+.tl{list-style:none;margin:0;padding:0 0 0 28px;border-left:2px solid var(--line)}
+.tl li{position:relative;margin-bottom:28px}
+.tl li::before{content:"";position:absolute;left:-37px;top:6px;width:14px;height:14px;background:var(--red);transform:rotate(45deg);box-shadow:0 0 12px var(--glow)}
+.tl h3{font-size:21px}.tl span{color:var(--red);font-size:16px}.tl p{margin:4px 0 0;color:var(--muted);max-width:58ch}
+.mail{font:700 clamp(20px,4.6vw,48px)/1.1 "Chakra Petch",sans-serif;text-decoration:none;color:var(--ink);word-break:break-all;border-bottom:4px solid var(--red)}
+.mail:hover{color:var(--red)}
+.contact .btns{margin-top:32px}
+footer{padding:26px 0 40px;color:var(--muted);font-size:16px;border-top:1px solid var(--line)}
+@media (max-width:760px){.about{grid-template-columns:1fr}nav div{gap:12px}nav a{font-size:15px}body{font-size:18px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.bar i{width:70%}}
+</style>
+</head>
+<body>
+<nav aria-label="Main"><div class="wrap"><b>ND//</b><div><a href="#about">About</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a></div></div></nav>
+<div class="wrap">
+<header class="hero">
+<span class="tag">Player: novadash-19 · Status: open to internships</span><br>
+<h1 data-t="Nitin Dalakoti">Nitin <span class="r">Dalakoti</span></h1>
+<p>Third-year B.Tech Computer Science student. I build software, solve problems and level up with every project.</p>
+<div class="btns"><a class="btn p" href="#projects">View projects</a><a class="btn" href="#contact">Contact me</a></div>
+<div class="hud">
+<div class="stat"><small>Class</small><strong>B.Tech CSE</strong></div>
+<div class="stat"><small>Level</small><strong>Year 3</strong></div>
+<div class="stat"><small>CGPA 7.0 / 10</small><strong>XP</strong><div class="bar"><i></i></div></div>
+</div>
+</header>
+
+<section id="about">
+<h2>About me</h2>
+<div class="about">
+<div>
+<p>I’m Nitin, a computer science student in my third year of B.Tech. I like turning ideas into working code, and I treat every project like a new level: learn the mechanics, ship it, then improve it.</p>
+<p>I’m looking for an internship where I can build real features, learn from experienced developers and grow as an engineer.</p>
+</div>
+<aside class="panel"><dl>
+<dt>Degree</dt><dd>B.Tech, Computer Science</dd>
+<dt>Year</dt><dd>3rd year</dd>
+<dt>CGPA</dt><dd>7.0 / 10</dd>
+<dt>GitHub</dt><dd>novadash-19</dd>
+</dl></aside>
+</div>
+</section>
+
+<section id="skills">
+<h2>Loadout</h2>
+<div class="loadout">
+<div><h3>Languages</h3><div class="chips"><span>C / C++</span><span>Python</span><span>Java</span><span>JavaScript</span></div></div>
+<div><h3>Web</h3><div class="chips"><span>HTML</span><span>CSS</span><span>React</span><span>Node.js</span></div></div>
+<div><h3>Tools</h3><div class="chips"><span>Git</span><span>GitHub</span><span>SQL</span><span>Linux</span></div></div>
+<div><h3>Core subjects</h3><div class="chips"><span>DSA</span><span>OOP</span><span>DBMS</span><span>OS</span></div></div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Missions</h2>
+<div class="proj">
+<article class="card"><h3>Fruits Freshness Checker</h3><p>A tool that checks whether a fruit is fresh or rotten, helping reduce food waste and manual inspection.</p><a href="https://github.com/novadash-19/fruit-freshness-checker" target="_blank" rel="noopener">View on GitHub</a></article>
+<article class="card"><h3>House Price Prediction</h3><p>A machine learning project that predicts house prices from features such as size, location and rooms.</p><a href="https://github.com/novadash-19/House-Price-Prediction" target="_blank" rel="noopener">View on GitHub</a></article>
+<article class="card"><h3>Product Portfolio</h3><p>A clean web page that shows products as cards, built to practise layout and responsive front-end design.</p><a href="https://github.com/novadash-19/Product-Card" target="_blank" rel="noopener">View on GitHub</a></article>
+<article class="card"><h3>Portfolio Card</h3><p>A personal profile card that introduces who I am with a neat, responsive layout.</p><a href="https://github.com/novadash-19/Portfolio-Card" target="_blank" rel="noopener">View on GitHub</a></article>
+<article class="card"><h3>Free API Keys</h3><p>A handy collection of free APIs that developers can use in their projects, with no budget needed.</p><a href="https://github.com/novadash-19/Free-Apis" target="_blank" rel="noopener">View on GitHub</a></article>
+</div>
+</section>
+
+<section id="journey">
+<h2>Journey</h2>
+<ul class="tl">
+<li><span>Now</span><h3>Third year, B.Tech CSE</h3><p>Going deeper into operating systems, databases and software engineering while building projects.</p></li>
+<li><span>Earlier</span><h3>Core CS foundations</h3><p>Learned programming, data structures and object-oriented design.</p></li>
+<li><span>Day one</span><h3>Started B.Tech</h3><p>Wrote my first programs and started building on GitHub.</p></li>
+</ul>
+</section>
+
+<section id="contact" class="contact">
+<h2>Join my squad</h2>
+<a class="mail" href="mailto:ndalakoti1906@gmail.com">ndalakoti1906@gmail.com</a>
+<div class="btns">
+<a class="btn p" href="https://github.com/novadash-19" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/nitin-dalakoti-02b04b323/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://www.instagram.com/iron_senpai2019" target="_blank" rel="noopener">Instagram</a>
+</div>
+</section>
+<footer>© 2026 Nitin Dalakoti. Game on.</footer>
+</div>
+</body>
+</html>
